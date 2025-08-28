@@ -1,0 +1,209 @@
+body {
+  background-color: white;
+  color: white;
+}
+
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #021445;
+}
+
+.logo-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 12px 45px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-bar button, button {
+  padding: 12px 24px;
+  background: #3E3051;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.search-bar button:hover, button {
+  background: #3E3051;
+}
+
+/* Modale */
+.search-results {
+  display: none;
+  position: relative;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-results {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  background: #3E3051;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.image-card {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+}
+
+.image-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.reserve-link {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: #3E3051;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.reserve-link:hover {
+  background: darkcyan;
+}
+
+/* 🎨 Ajout du fond sur le main */
+main.main {
+  background: url('img/background.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2.5fr; /* la première colonne est plus fine */
+    gap: 20px; /* espace entre colonnes */
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.col {
+  padding: 15px;
+  text-align: left;
+}
+
+.social-links {
+  vertical-align: baseline;
+  list-style-type: none;
+}
+
+.content {
+  justify-content: flex-start;
+  color: white;
+  position: relative;
+  margin: auto;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+p {
+  font-size: 1.5em
+}
+
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+label {
+  display: block;
+  padding-top: 10px;
+  font-size: 19;
+  font-weight: bold;
+}
+
+input, textarea, select {
+   padding:15px;
+   border-radius:5px;
+   width:300px;
+ }
+
+ .current-page {
+     text-decoration: underline;
+     text-decoration-thickness: .125em;
+ }

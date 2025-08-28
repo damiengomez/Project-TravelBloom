@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommandation de Voyage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="logo-title">
+      <img src="img/icon-plane.png" alt="">
+      TravelBloom
+    </h1>
+    <nav>
+      <ul class="nav ul">
+        <li class="nav ul li">
+          <a class="current-page" href="index.html" aria-current="page">Accueil</a>
+        </li>
+        <li class="nav ul li">
+          <a href="about.html">À propos de nous</a>
+        </li>
+        <li class="nav ul li">
+          <a href="contact.html">Nous contacter</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." title="Rechercher plages, temples, villes"/>
+      <button onclick="performSearch()">Rechercher</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="grid">
+      <div class="col">
+        <ul class="social-links">
+            <li><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></li>
+            <li><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></li>
+            <li><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></li>
+        </ul>
+      </div>
+      <div class="content col">
+        <h2>EXPLORER DES DESTINATIONS DE REVES</h2>
+        <p>Voyager c'est cool.</p>
+        <p>Mais avec nous, c'est encore un peu plus mieux cool, parce que les destinations biens qui sont les meilleurs pour être voyagés, c'est chez nous qu'on les retrouves!</p>
+      </div>
+      <div class="col">
+        <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
+        <div class="search-results" id="searchResults">
+          <h3>Nos recommandations</h3>
+          <button class="close-results" onclick="closeResults()">Fermer
+            <span class="sr-only">Nos recommandations</span>
+          </button>
+          <div id="searchContent"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
