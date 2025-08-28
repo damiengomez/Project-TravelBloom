@@ -4,17 +4,34 @@ const images = {
   villes: ["img/city-1.jpg", "img/city-2.jpg"]
 };
 
+// Table de synonymes / alias
+const alias = {
+  plage: "plages",
+  plages: "plages",
+  beach: "plages",
+  beaches: "plages",
+  temple: "temples",
+  temples: "temples",
+  ville: "villes",
+  villes: "villes",
+  city: "villes",
+  cities: "villes"
+};
+
 function performSearch() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
   const resultsContainer = document.getElementById("searchResults");
   const content = document.getElementById("searchContent");
   const message = document.getElementById("searchMessage");
 
-  content.innerHTML = ""; // reset contenu
-  resultsContainer.style.display = "none"; // reset modale
+  content.innerHTML = "";
+  resultsContainer.style.display = "none";
 
-  if (images[input]) {
-    images[input].forEach(src => {
+  // Vérifie si l'input correspond à un alias
+  const key = alias[input];
+
+  if (key && images[key]) {
+    images[key].forEach(src => {
       const card = document.createElement("div");
       card.className = "image-card";
 
@@ -23,7 +40,7 @@ function performSearch() {
       img.alt = input;
 
       const link = document.createElement("a");
-      link.href = "reservation.html"; // tu peux changer la destination
+      link.href = "reservation.html";
       link.textContent = "Réserver";
       link.className = "reserve-link";
 
@@ -31,8 +48,8 @@ function performSearch() {
       card.appendChild(link);
       content.appendChild(card);
     });
-    message.textContent = `${images[input].length} résultats trouvés pour "${input}"`;
-    resultsContainer.style.display = "block"; // affiche modale
+    message.textContent = `${images[key].length} résultats trouvés pour "${input}"`;
+    resultsContainer.style.display = "block";
   } else {
     message.textContent = `Aucun résultat trouvé pour "${input}"`;
   }
