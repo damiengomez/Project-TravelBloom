@@ -62,3 +62,10 @@ function closeResults() {
 function thankyou(){
     alert('Merci de nous avoir contactés !');
 }
+
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // empêche le rechargement de la page
+    performSearch();
+  }
+});

@@ -44,7 +44,18 @@
       <h1>À propos de nous</h1>
       <p>Nous sommes passionnés par le voyage, genre vraiment complètement fada (merci de lire ce texte avec un accent du sud). Si nous n'avions pas de maison, on aimerait vivre dans un avion, et même en y repensant, on va peut être d'ailleurs vendre la maison pour acheter un avion et le mettre dans le jardin. C'est ça la vrai passion qui nous animes !</p>
     </div>
+    <div class="col">
+      <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
+      <div class="search-results" id="searchResults">
+        <h3>Nos recommandations</h3>
+        <button class="close-results" onclick="closeResults()">Fermer
+          <span class="sr-only">Nos recommandations</span>
+        </button>
+        <div id="searchContent"></div>
+      </div>
+    </div>
   </div>
 </main>
+<script src="script.js"></script>
 </body>
 </html>
