@@ -7,10 +7,12 @@
 </head>
 
 <header class="header">
-  <h1 class="logo-title">
-    <img src="img/icon-plane.png" alt="">
-    TravelBloom
-  </h1>
+    <h1 class="logo-title">
+      <a href="index.html" aria-label="Home" style="text-decoration: none; color: white">
+      <img src="img/icon-plane.png" alt="icon-plane">
+      TravelBloom
+      </a>
+    </h1>
   <nav>
     <ul class="nav ul">
       <li class="nav ul li">
@@ -25,8 +27,8 @@
     </ul>
   </nav>
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." title="Rechercher plages, temples, villes"/>
-    <button onclick="performSearch()">Rechercher</button>
+    <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300" title="Rechercher plages, temples, villes"/>
+    <button onclick="performSearch()">Go !</button>
   </div>
 </header>
 
@@ -35,34 +37,37 @@
     <div class="grid">
       <div class="col">
         <ul class="social-links">
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></li>
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></li>
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></li>
+            <li><a href="#" title="Facebook de TravelBloom"><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></a></li>
+            <li><a href="#" title="LinkedIn"><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></a></li>
+            <li><a href="#" title="Insta"><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></a></li>
         </ul>
       </div>
       <div class="col content">
-        <h2>CONTACTEZ NOUS</h2>
+        <h1>CONTACTEZ NOUS</h1>
+        <p></p>
         <p>N'hésitez pas à nous contacter, pour en savoir plus sur nos voyages et nos offres totalement incroyable.</p>
 
           <form id="contactForm" class="form">
             <div>
-              <label for="name">Nom</label>
+              <p>Nom</p>
               <input type="text" id="name" name="name" required>
             </div>
             <div>
-              <label for="email">Email</label>
+              <p>Email</p>
               <input type="email" id="email" name="email" required>
             </div>
             <div>
-              <label for="condition">Adresse</label>
+              <p>Adresse</p>
               <input type="text" id="condition" name="condition" required>
             </div>
             <div>
-              <label for="message">Message</label>
+              <p>Message</p>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" onclick="thankyou()">Soumettre</button>
           </form>
+          <p></p>
+          <iframe title="" width="304" height="78" frameborder="0" scrolling="no" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld3yhkUAAAAANACSkMEvET7PXRGIX6Ao5yqVTlm&amp;co=aHR0cHM6Ly93d3cubGFudXRyaXRpb24uZnI6NDQz&amp;hl=fr&amp;type=image&amp;v=2sJvksnKlEApLvJt2btz_q7n&amp;theme=light&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=puf8k4hqvcc3"></iframe>
         </div>
         <div class="col">
           <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>

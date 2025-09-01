@@ -12,8 +12,10 @@
 <body>
   <header class="header">
     <h1 class="logo-title">
-      <img src="img/icon-plane.png" alt="">
+      <a href="index.html" aria-label="Home" style="text-decoration: none; color: white">
+      <img src="img/icon-plane.png" alt="icon-plane">
       TravelBloom
+      </a>
     </h1>
     <nav>
       <ul class="nav ul">
@@ -29,8 +31,8 @@
       </ul>
     </nav>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." title="Rechercher plages, temples, villes"/>
-      <button onclick="performSearch()">Rechercher</button>
+      <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300" title="Rechercher plages, temples, villes"/>
+      <button onclick="performSearch()">Go !</button>
     </div>
   </header>
 
@@ -38,9 +40,9 @@
     <div class="grid">
       <div class="col">
         <ul class="social-links">
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></li>
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></li>
-            <li><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></li>
+            <li><a href="#" title="Facebook de TravelBloom"><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></a></li>
+            <li><a href="#" title="LinkedIn"><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></a></li>
+            <li><a href="#" title="Insta"><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></a></li>
         </ul>
       </div>
       <div class="content col">
@@ -51,7 +53,7 @@
       <div class="col">
         <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
         <div class="search-results" id="searchResults">
-          <h3>Nos recommandations</h3>
+          <h1>Nos recommandations</h1>
           <button class="close-results" onclick="closeResults()">Fermer
             <span class="sr-only">Nos recommandations</span>
           </button>
