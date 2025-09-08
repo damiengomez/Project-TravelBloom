@@ -4,7 +4,6 @@ const images = {
   villes: ["img/city-1.jpg", "img/city-2.jpg"]
 };
 
-// Table de synonymes / alias
 const alias = {
   plage: "plages",
   plages: "plages",
@@ -18,22 +17,24 @@ const alias = {
   cities: "villes"
 };
 
+let currentIndex = 0;
+let autoSlideInterval;
+
 function performSearch() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
   const resultsContainer = document.getElementById("searchResults");
-  const content = document.getElementById("searchContent");
+  const content = document.querySelector("#searchContent .carousel-inner");
   const message = document.getElementById("searchMessage");
 
   content.innerHTML = "";
   resultsContainer.style.display = "none";
 
-  // Vérifie si l'input correspond à un alias
   const key = alias[input];
 
   if (key && images[key]) {
     images[key].forEach(src => {
-      const card = document.createElement("div");
-      card.className = "image-card";
+      const slide = document.createElement("div");
+      slide.className = "carousel-item";
 
       const img = document.createElement("img");
       img.src = src;
@@ -44,28 +45,71 @@ function performSearch() {
       link.textContent = "Réserver";
       link.className = "reserve-link";
 
-      card.appendChild(img);
-      card.appendChild(link);
-      content.appendChild(card);
+      slide.appendChild(img);
+      slide.appendChild(link);
+      content.appendChild(slide);
     });
     message.textContent = `${images[key].length} résultats trouvés pour "${input}"`;
     resultsContainer.style.display = "block";
+    currentIndex = 0;
+    updateCarousel();
+    startAutoSlide();
   } else {
     message.textContent = `Aucun résultat trouvé pour "${input}"`;
+    stopAutoSlide();
   }
 }
 
 function closeResults() {
   document.getElementById("searchResults").style.display = "none";
+  stopAutoSlide();
 }
 
 function thankyou(){
     alert('Merci de nous avoir contactés !');
 }
 
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+}
+
+function nextSlide() {
+  const slides = document.querySelectorAll(".carousel-item");
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
+}
+
+function updateCarousel() {
+  const slides = document.querySelectorAll(".carousel-item");
+  const transformValue = -currentIndex * 100 + "%";
+  document.querySelector(".carousel-inner").style.transform = "translateX(" + transformValue + ")";
+}
+
+function startAutoSlide() {
+  stopAutoSlide(); // Stop any existing interval
+  autoSlideInterval = setInterval(() => {
+    const slides = document.querySelectorAll(".carousel-item");
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }, 2000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
 document.getElementById("searchInput").addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
-    event.preventDefault(); // empêche le rechargement de la page
+    event.preventDefault();
     performSearch();
   }
 });
