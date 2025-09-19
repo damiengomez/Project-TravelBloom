@@ -13,8 +13,8 @@
 <body>
   <header class="header">
     <h1 class="logo-title">
+      <img src="img/icon-plane.png" alt="icon-plane">
       <a href="index.html" aria-label="Home" style="text-decoration: none; color: white">
-        <img src="img/icon-plane.png" alt="icon-plane">
         TravelBloom
       </a>
     </h1>
@@ -33,7 +33,7 @@
     </nav>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300"
-        title="Rechercher plages, temples, villes" />
+        title="Touver une plages, temples, villes" />
       <button onclick="performSearch()">Go !</button>
     </div>
   </header>
@@ -43,7 +43,7 @@
       <div class="col">
         <ul class="social-links">
           <li><a href="#" title="Facebook de TravelBloom"><img src="https://placehold.co/30x30/fff/14505C?text=f"
-                alt="Facebook"></a></li>
+                alt="fb"></a></li>
           <li><a href="#" title="LinkedIn"><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></a>
           </li>
           <li><a href="#" title="Insta"><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></a>
@@ -55,13 +55,14 @@
         <p>Voyager c'est cool.</p>
         <p>Mais avec nous, c'est encore un peu plus mieux cool, parce que les destinations biens qui sont les meilleures
           pour être voyagées, c'est chez nous qu'on les retrouve !</p>
+        <p></p>
+        <p>Réserver votre prochaine destination en cliquant sur l'avion ;)</p>
       </div>
       <div class="col">
         <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
         <div class="search-results" id="searchResults">
           <h1>Nos recommandations</h1>
-          <button class="close-results" onclick="closeResults()">Fermer
-            <span class="sr-only">Nos recommandations</span>
+          <button class="close-results" onclick="closeResults()">X
           </button>
           <div id="searchContent">
             <div class="carousel">
