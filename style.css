@@ -124,7 +124,7 @@ button {
   text-decoration: none;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s;
+  transition: background 0.4s;
 }
 
 .reserve-link:hover {
@@ -229,7 +229,7 @@ select {
 
 .carousel-inner {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 
 .carousel-item {

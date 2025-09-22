@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -34,7 +34,9 @@
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300"
         title="Touver une plages, temples, villes" />
-      <button onclick="performSearch()">Go !</button>
+      <button onclick="performSearch()">
+        <image src="img/Go.jpg" alt="Go!">
+      </button>
     </div>
   </div>
 
@@ -61,7 +63,7 @@
       <div class="col">
         <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
         <div class="search-results" id="searchResults">
-          <h1>Nos recommandations</h1>
+          <h1 style="color: rgb(145, 155, 199);">Fermer nos recommandations</h1>
           <button class="close-results" onclick="closeResults()">X
           </button>
           <div id="searchContent">

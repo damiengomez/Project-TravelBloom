@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,7 +32,9 @@
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300"
         title="Rechercher plages, temples, villes" />
-      <button onclick="performSearch()">Go !</button>
+      <button onclick="performSearch()">
+        <image src="img/Go.jpg" alt="Go!">
+      </button>
     </div>
   </div>
 
@@ -51,8 +53,10 @@
       <div class="content col small-col">
         <h1>À propos de nous</h1>
         <p></p>
-        <p>Nous sommes passionnés par le <a style="text-decoration: none; color:white" href="#">voyage</a>, genre vraiment complètement fada (merci de lire ce texte avec un accent
-          du sud). Si nous n'avions pas de maison, on aimerait vivre dans un <a style="text-decoration: none; color:white" href="#">avion</a>, et même en y repensant, on va
+        <p>Nous sommes passionnés par le <a style="text-decoration: none; color:white" href="#">voyage</a>, genre
+          vraiment complètement fada (merci de lire ce texte avec un accent
+          du sud). Si nous n'avions pas de maison, on aimerait vivre dans un <a
+            style="text-decoration: none; color:white" href="#">avion</a>, et même en y repensant, on va
           peut-être d'ailleurs vendre la maison pour acheter un avion et le mettre dans le jardin. C'est ça la vraie
           passion qui nous anime !</p>
         <p></p>
@@ -64,9 +68,9 @@
       <div class="col">
         <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
         <div class="search-results" id="searchResults">
-          <h1>Nos recommandations</h1>
-          <button class="close-results" onclick="closeResults()">Fermer
-            <span class="sr-only">Nos recommandations</span>
+          <h1 style="color: rgb(145, 155, 199);">Nos recommandations</h1>
+          <button class="close-results" onclick="closeResults()">X
+            <span class="sr-only">Fermer nos recommandations</span>
           </button>
           <div id="searchContent">
             <div class="carousel">

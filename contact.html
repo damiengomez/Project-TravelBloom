@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Contactez-nous</title>
@@ -7,12 +8,12 @@
 </head>
 
 <div class="header">
-    <h1 class="logo-title">
-      <a href="index.html" aria-label="Home" style="text-decoration: none; color: white">
+  <h1 class="logo-title">
+    <a href="index.html" aria-label="Home" style="text-decoration: none; color: white">
       <img src="img/icon-plane.png" alt="icon-plane">
       TravelBloom
-      </a>
-    </h1>
+    </a>
+  </h1>
   <nav>
     <ul class="nav ul">
       <li class="nav ul li">
@@ -27,8 +28,11 @@
     </ul>
   </nav>
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300" title="Rechercher plages, temples, villes"/>
-    <button aria-hidden="true" onclick="performSearch()">Go !</button>
+    <input type="text" id="searchInput" placeholder="Rechercher plages, temples, villes..." size="60" maxlength="300"
+      title="Rechercher plages, temples, villes" />
+    <button onclick="performSearch()">
+      <image src="img/Go.jpg" alt="Go!">
+    </button>
   </div>
 </div>
 
@@ -37,9 +41,12 @@
     <div class="grid">
       <div class="col">
         <ul class="social-links">
-            <li><a href="#" title="Facebook de TravelBloom"><img src="https://placehold.co/30x30/fff/14505C?text=f" alt="Facebook"></a></li>
-            <li><a href="#" title="LinkedIn"><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></a></li>
-            <li><a href="#" title="Insta"><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></a></li>
+          <li><a href="#" title="Facebook de TravelBloom"><img src="https://placehold.co/30x30/fff/14505C?text=f"
+                alt="Facebook"></a></li>
+          <li><a href="#" title="LinkedIn"><img src="https://placehold.co/30x30/fff/14505C?text=in" alt="LinkedIn"></a>
+          </li>
+          <li><a href="#" title="Insta"><img src="https://placehold.co/30x30/fff/14505C?text=ig" alt="Instagram"></a>
+          </li>
         </ul>
       </div>
       <div class="col content">
@@ -47,34 +54,35 @@
         <p></p>
         <p>N'hésitez pas à nous contacter, pour en savoir plus sur nos voyages et nos offres totalement incroyable.</p>
 
-          <form id="contactForm" class="form">
-            <div>
-              <p>Nom</p>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <p>Email</p>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <p>Adresse</p>
-              <input type="text" id="condition" name="condition" required>
-            </div>
-            <div>
-              <p>Message</p>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" onclick="thankyou()">Soumettre</button>
-          </form>
-          <p></p>
-          <iframe title="" width="304" height="78" frameborder="0" scrolling="no" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld3yhkUAAAAANACSkMEvET7PXRGIX6Ao5yqVTlm&amp;co=aHR0cHM6Ly93d3cubGFudXRyaXRpb24uZnI6NDQz&amp;hl=fr&amp;type=image&amp;v=2sJvksnKlEApLvJt2btz_q7n&amp;theme=light&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=puf8k4hqvcc3"></iframe>
-        </div>
+        <form id="contactForm" class="form">
+          <div>
+            <p>Nom</p>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <p>Email</p>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <p>Adresse</p>
+            <input type="text" id="condition" name="condition" required>
+          </div>
+          <div>
+            <p>Message</p>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" onclick="thankyou()">Soumettre</button>
+        </form>
+        <p></p>
+        <iframe title="" width="304" height="78" frameborder="0" scrolling="no"
+          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld3yhkUAAAAANACSkMEvET7PXRGIX6Ao5yqVTlm&amp;co=aHR0cHM6Ly93d3cubGFudXRyaXRpb24uZnI6NDQz&amp;hl=fr&amp;type=image&amp;v=2sJvksnKlEApLvJt2btz_q7n&amp;theme=light&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=puf8k4hqvcc3"></iframe>
+      </div>
       <div class="col">
         <p id="searchMessage" style="text-align: center; font-weight: bold; margin-top: 10px;"></p>
         <div class="search-results" id="searchResults">
-          <h1>Nos recommandations</h1>
-          <button class="close-results" onclick="closeResults()">Fermer
-            <span class="sr-only">Nos recommandations</span>
+          <h1 style="color: rgb(145, 155, 199);">Nos recommandations</h1>
+          <button class="close-results" onclick="closeResults()">X
+            <span class="sr-only">Fermer nos recommandations</span>
           </button>
           <div id="searchContent">
             <div class="carousel">
@@ -87,7 +95,8 @@
           </div>
         </div>
       </div>
-      </div>
-  <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

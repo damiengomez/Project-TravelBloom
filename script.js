@@ -70,7 +70,7 @@ function thankyou(){
 }
 
 function prevSlide() {
-  if (currentIndex > 0) {
+  if (currentIndex > 1) {
     currentIndex--;
     updateCarousel();
   }
@@ -91,16 +91,12 @@ function updateCarousel() {
 }
 
 function startAutoSlide() {
-  stopAutoSlide(); // Stop any existing interval
+  stopAutoSlide(); // arrêter tout interval existant
   autoSlideInterval = setInterval(() => {
     const slides = document.querySelectorAll(".carousel-item");
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
+    currentIndex = (currentIndex + 1) % slides.length; // boucle
     updateCarousel();
-  }, 2000);
+  }, 4000); // 4 secondes entre chaque changement
 }
 
 function stopAutoSlide() {
