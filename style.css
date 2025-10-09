@@ -140,7 +140,7 @@ button {
 }
 
 /* 🎨 Ajout du fond sur le main */
-main.main {
+.main {
   background: url('img/background.jpg') no-repeat center center/cover;
   min-height: 100vh;
   padding: 20px;
